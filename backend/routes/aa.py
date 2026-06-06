@@ -7,19 +7,10 @@ from database import get_database
 from services.mock_aa import MockAccountAggregator
 import logging
 
-router = APIRouter(prefix="/api/consent", tags=["account_aggregator"])
-security = HTTPBearer()
-logger = logging.getLogger(__name__)
+from routes.auth import verify_jwt
 
-def verify_jwt(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    token = credentials.credentials
-    try:
-        payload = jwt.decode(token, settings.jwt_secret_key, algorithms=[settings.jwt_algorithm])
-        return payload["sub"] # return user_id
-    except jwt.ExpiredSignatureError:
-        raise HTTPException(status_code=401, detail="Token expired")
-    except jwt.InvalidTokenError:
-        raise HTTPException(status_code=401, detail="Invalid token")
+router = APIRouter(prefix="/api/consent", tags=["account_aggregator"])
+logger = logging.getLogger(__name__)
 
 @router.post("/init")
 async def init_consent(user_id: str = Depends(verify_jwt)):
