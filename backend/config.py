@@ -2,7 +2,7 @@ import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    mongodb_url: str = "mongodb://localhost:27017"
+    mongo_uri: str = "mongodb://localhost:27017"
     database_name: str = "finsights"
     jwt_secret_key: str = "supersecretkey_change_me_in_production"
     jwt_algorithm: str = "HS256"
