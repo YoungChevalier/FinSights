@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: finsights-api
+    env: docker
+    region: oregon
+    plan: free
+    rootDir: backend
+    healthCheckPath: /
+    envVars:
+      - key: MONGO_URI
+        sync: false # User must set this in dashboard
+      - key: JWT_SECRET_KEY
+        sync: false # User must set this in dashboard
+      - key: GEMINI_API_KEY
+        sync: false # User must set this in dashboard

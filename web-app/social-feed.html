@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinSights - Social</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+  </style>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-sm min-h-screen flex flex-col overflow-hidden relative antialiased selection:bg-secondary/30 selection:text-secondary">
+<!-- Ambient Glow Background -->
+<div class="absolute top-0 left-0 w-full h-[442px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none transform -translate-y-1/2"></div>
+
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-container-margin h-16 bg-background dark:bg-background border-b border-outline-variant docked full-width top-0 sticky z-40 shadow-[0_4px_20px_rgba(0,0,0,0.5)] shrink-0">
+<div class="flex items-center gap-sm">
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" data-alt="A futuristic cyberpunk avatar portrait of a young tech-savvy professional. The lighting is neon cyan and deep black, highly detailed. Sleek and high-octane aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5BmN4ddoFRTa3MWtvQtNEuaXMxrimHcJLoxEQZf6S19-N-PJfD1HzAWbIm0t5CJrfdKzhSJwpD-1dFwvT71mB5akMNOJ4P3g0ScYMQ_VnQcpIWIBVASTXJFLa9-VYofH8Jh0RmX4ipap15CkbB9oH6bqzozakjvSUR3kxT-4-RhmrPGHdaH9tUp4tlqKIjIkeWobFJ37z-nuxPQl7-bMDywyY3jTY4t2QvcUNNNwSWAw_qjTcDfH3LDmxTcSErIk8EuVmrJtY7Z1A"/>
+</div>
+<h1 class="font-display text-display bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-bold tracking-tight text-center flex-1">FinSights</h1>
+<button class="text-primary dark:text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto hide-scrollbar w-full max-w-2xl mx-auto px-container-margin pt-xl flex flex-col gap-lg pb-32 relative z-10">
+<!-- Activity Card 1 -->
+<article class="bg-surface-container rounded-2xl border border-outline-variant/20 p-md shadow-lg flex flex-col gap-sm relative overflow-hidden">
+<div class="flex items-center gap-md mb-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">location_city</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary tracking-tight">Priya <span class="font-normal text-on-surface-variant">unlocked a new skin!</span></h3>
+<p class="font-label-caps text-[10px] text-outline mt-0.5 tracking-wider">2 MINS AGO</p>
+</div>
+</div>
+<div class="relative h-32 rounded-xl overflow-hidden shadow-md">
+<img alt="Neon City Skin" class="w-full h-full object-cover" data-alt="A highly detailed isometric rendering of a futuristic neon city building, sleek dark mode aesthetic with cyan glowing accents. High-octane, precision engineered look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiNTmrI9Uxvs_0GxlVm0NhTsf3sHX2Uh5vGP4Hm95srqtQmkPHPGxpeazI3Vr-mBFQ0F5QCT7XByn2ejprpKfxmlXVKPOOsM1jFlU1B7dh9w5-V0md106dsSdoSMCxkSh0665oMn7FT4SYT6IhptCZhH4CmZXylCvuGo3Mh8_iFbrzFOCdPrX0auGGgYEy5IfoRwJeY6X2y38lXdx93qmk4NN0_EALMmFURZYwd29xyWhl9BG2N-l9iLC1Q0J0dV48kwuad7yXooW2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<p class="font-title-md text-title-md text-primary drop-shadow-md">Cyber Tower</p>
+<p class="font-label-caps text-label-caps text-secondary mt-1 px-2 py-0.5 bg-secondary/10 rounded border border-secondary/20 inline-block backdrop-blur-sm">RARITY: EPIC</p>
+</div>
+</div>
+<div class="flex gap-md mt-sm border-t border-outline-variant/10 pt-sm">
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-high hover:bg-surface-variant transition-all active:scale-95 text-on-surface shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<span class="font-mono-data text-mono-data">12</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-high hover:bg-surface-variant transition-all active:scale-95 text-on-surface shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm">sign_language</span>
+<span class="font-mono-data text-mono-data">4</span>
+</button>
+</div>
+</article>
+
+<!-- Activity Card 2 -->
+<article class="bg-surface-container rounded-2xl border border-outline-variant/20 p-md shadow-lg flex flex-col gap-sm relative overflow-hidden">
+<div class="flex items-center gap-md mb-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary tracking-tight">Rahul <span class="font-normal text-on-surface-variant">completed a quest</span></h3>
+<p class="font-label-caps text-[10px] text-outline mt-0.5 tracking-wider">15 MINS AGO</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-md border border-outline-variant/20 shadow-inner">
+<div class="flex justify-between items-center mb-sm">
+<p class="font-body-lg text-body-lg font-semibold text-primary">No-Spend Saturday</p>
+<span class="material-symbols-outlined text-secondary text-2xl drop-shadow-[0_0_8px_rgba(68,226,205,0.4)]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="w-full bg-background h-2.5 rounded-full overflow-hidden shadow-inner border border-outline-variant/10">
+<div class="bg-gradient-to-r from-secondary-fixed-dim to-primary-fixed-dim h-full w-full relative shimmer-bg"></div>
+</div>
+<p class="font-mono-data text-mono-data text-right mt-2 text-secondary-fixed-dim font-bold">+500 XP</p>
+</div>
+<div class="flex gap-md mt-sm border-t border-outline-variant/10 pt-sm">
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-high hover:bg-surface-variant transition-all active:scale-95 text-secondary shadow-sm border border-secondary/20 bg-secondary/5">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<span class="font-mono-data text-mono-data">42</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-high hover:bg-surface-variant transition-all active:scale-95 text-on-surface shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+<span class="font-mono-data text-mono-data">3</span>
+</button>
+</div>
+</article>
+
+<!-- Activity Card 3 (Self) -->
+<article class="bg-surface-container rounded-2xl border border-secondary/40 p-md shadow-[0_4px_20px_rgba(68,226,205,0.1)] flex flex-col gap-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-primary-fixed-dim"></div>
+<div class="flex items-center gap-md mb-xs relative z-10">
+<img alt="Profile" class="w-10 h-10 rounded-full border-2 border-secondary shadow-[0_0_10px_rgba(68,226,205,0.3)] object-cover" data-alt="A futuristic cyberpunk avatar portrait of a young tech-savvy professional. The lighting is neon cyan and deep black, highly detailed. Sleek and high-octane aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4aM6IfRD_QU5Q3nevoo90tnLeE1BIkro5xGApsuULVteZGg4R4TlswRhG143jEmUJWFz4O0etQ4dt2br5p9Rq0F-r1HeAe7mDowLoP_eTzQvzsGUthb0XxGxT2mkYfqROgV70Mnl1iCIf_XZcSO8b3RbgSjS7Zlirfy_68hJ7p_0t2DbmpAJxBnNkHlTiFr9JcSOpCoZqSGqYZrWZ1p3D3NXHjR4eiU1x29y25AJzc77pUz7dqB4y6MI2PWgT76ScsWoETqRZ6zXC"/>
+<div>
+<h3 class="font-title-md text-title-md text-secondary tracking-tight">You <span class="font-normal text-on-surface-variant">hit a new milestone!</span></h3>
+<p class="font-label-caps text-[10px] text-outline mt-0.5 tracking-wider">JUST NOW</p>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center py-xl relative z-10">
+<div class="w-28 h-28 rounded-full border border-secondary flex items-center justify-center bg-secondary/5 mb-md relative shadow-[inset_0_0_20px_rgba(68,226,205,0.2)]">
+<div class="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse-flame"></div>
+<span class="font-display text-[32px] text-primary tracking-tighter drop-shadow-lg">Lvl.6</span>
+</div>
+<p class="font-title-md text-[22px] text-tertiary text-center font-bold">Savvy Saver Rank Unlocked</p>
+</div>
+<div class="flex gap-md mt-sm border-t border-outline-variant/10 pt-sm relative z-10">
+<button class="flex items-center gap-xs px-md py-2 rounded-xl bg-secondary hover:bg-secondary-fixed transition-all active:scale-95 text-on-secondary shadow-[0_4px_10px_rgba(68,226,205,0.3)] font-semibold w-full justify-center">
+<span class="material-symbols-outlined text-sm">share</span>
+<span class="font-body-sm text-body-sm">Share Achievement</span>
+</button>
+</div>
+</article>
+</main>
+
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-1 py-2 bg-surface-container-lowest border-t border-outline-variant/10 shadow-[0px_-10px_30px_rgba(0,0,0,0.8)] pb-safe">
+    <a href="/" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">home</span>
+        <span class="font-label-caps text-[9px] mt-0.5 tracking-wider">Home</span>
+    </a>
+    <a href="/my-city.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">location_city</span>
+        <span class="font-label-caps text-[9px]">City</span>
+    </a>
+    <a href="/leaderboard.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">leaderboard</span>
+        <span class="font-label-caps text-[9px]">Leagues</span>
+    </a>
+    <a href="/social-feed.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-secondary bg-secondary-container/10 rounded-xl py-1 active:scale-90 shadow-[inset_0_1px_0_rgba(68,226,205,0.1)]">
+        <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">rss_feed</span>
+        <span class="font-label-caps text-[9px]">Feed</span>
+    </a>
+    <a href="/quests.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">swords</span>
+        <span class="font-label-caps text-[9px]">Quests</span>
+    </a>
+    <a href="/shop.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">shopping_bag</span>
+        <span class="font-label-caps text-[9px]">Shop</span>
+    </a>
+</nav>
+
+</body></html>

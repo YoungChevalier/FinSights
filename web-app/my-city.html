@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Future City</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+
+<!-- Tailwind Configuration -->
+
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        /* Hide scrollbar for sleekness */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        .glow-button {
+            background: linear-gradient(45deg, #00fbfb, #44e2cd);
+            color: #0a0a0a;
+            box-shadow: 0px 0px 10px 0px rgba(0, 251, 251, 0.15);
+        }
+        .inner-highlight {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+    </style>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="antialiased pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline-variant flex justify-between items-center px-container-margin py-sm w-full z-40">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">air_purifier_gen</span>
+</div>
+<h1 class="font-display text-display text-primary dark:text-primary-fixed tracking-tighter" style="font-size: 20px; line-height: 28px;">METROPOLIS</h1>
+</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform text-on-surface-variant dark:text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="px-container-margin py-md flex flex-col gap-lg md:max-w-2xl md:mx-auto">
+<!-- Header & Balance -->
+<section class="flex flex-col gap-base">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">My Future City</h2>
+<div class="flex items-baseline gap-xs">
+<span class="font-display text-display text-primary-container" id="balance-display">₹5,200</span>
+<span class="font-mono-data text-mono-data text-secondary">/ ₹15,000 Next</span>
+</div>
+</section>
+<!-- Central Visualization Canvas -->
+<section class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container inner-highlight border border-outline-variant shadow-[0_4px_30px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center group">
+<!-- Ambient Glow -->
+<div class="absolute inset-0 bg-secondary/30 blur-[80px] rounded-full scale-75 opacity-50 transition-all duration-500 pointer-events-none" id="city-glow"></div>
+<!-- Isometric Image -->
+<img class="relative z-10 w-[90%] h-[90%] object-contain transition-transform duration-300 ease-out pointer-events-none drop-shadow-2xl" id="city-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfBtJk_5QdePxRqyyrwGVmaYY2Q2m02YdQQbHVdct6yQwV2jCpuLnrJohYr73AVr38F9eh8MOLI2Y62yTvBZiSSieRU4VOHqHExNidlt7ePK8cmcrqsVBoMiPkWLE8oKjTrml0Fsz0JHJigjG_n5agdq13UL5vmYad-MLHNhwJZfkpBNiRG3k7sMguKiwC_f6_hNvLHu1YPIhQxf-1a0IzGAsPVy_ZkesmavgXXNKnFpJ7XAUx-K6Gtc8bKXOEsVWWvuISNSETA7Y8"/>
+<!-- Data Overlay -->
+<div class="absolute top-md left-md z-20 flex gap-sm">
+<div class="bg-surface-container-high/80 backdrop-blur-sm border border-outline-variant/50 px-sm py-xs rounded font-mono-data text-mono-data text-xs text-primary-container">
+                    LVL: SKYLINE
+                </div>
+</div>
+<!-- Interaction Button -->
+<button class="absolute bottom-md z-30 glow-button font-label-caps text-label-caps px-lg py-sm rounded-full flex items-center gap-xs hover:opacity-90 active:scale-95 transition-all duration-200" onclick="addFunds()">
+<span class="material-symbols-outlined text-[16px] leading-none">add</span>
+<span class="pt-[2px]">₹100</span>
+</button>
+</section>
+<!-- Smart Lock Panel -->
+<section class="bg-surface-container rounded-xl p-md inner-highlight border border-outline-variant relative overflow-hidden">
+<!-- Decorative accent line -->
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary shadow-[0_0_10px_rgba(68,226,205,0.5)]"></div>
+<div class="flex items-center justify-between mb-sm pl-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+<h3 class="font-title-md text-title-md text-on-surface">Smart Lock</h3>
+</div>
+<div class="bg-secondary/10 border border-secondary/30 px-sm py-base rounded font-mono-data text-mono-data text-[10px] text-secondary tracking-wider">
+                    ACTIVE
+                </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md pl-sm">Lock ₹1,000 for 30 days to earn the <span class="text-primary-container font-medium">Rare Neon Badge</span>.</p>
+<div class="flex flex-col gap-base pl-sm">
+<div class="flex justify-between font-mono-data text-mono-data text-xs">
+<span class="text-on-surface-variant">14 Days Left</span>
+<span class="text-secondary">53%</span>
+</div>
+<!-- Progress Bar Dual Tone -->
+<div class="w-full h-[6px] bg-surface-container-high rounded-full overflow-hidden relative">
+<div class="h-full bg-secondary w-[53%] rounded-full relative overflow-hidden shadow-[0_0_5px_rgba(68,226,205,0.8)]">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Milestone Tracker (Bento Grid Style) -->
+<section class="flex flex-col gap-sm">
+<h3 class="font-title-md text-title-md text-on-surface mb-xs">Development Path</h3>
+<div class="grid grid-cols-1 gap-base">
+<!-- Milestone 1 (Completed) -->
+<div class="bg-surface-container-high rounded-lg p-sm flex items-center justify-between border border-primary-container/20 inner-highlight">
+<div class="flex items-center gap-sm opacity-50">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface">Foundation</p>
+<p class="font-mono-data text-mono-data text-xs text-on-surface-variant">₹500</p>
+</div>
+</div>
+</div>
+<!-- Milestone 2 (Completed) -->
+<div class="bg-surface-container-high rounded-lg p-sm flex items-center justify-between border border-primary-container/20 inner-highlight">
+<div class="flex items-center gap-sm opacity-50">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface">Hub</p>
+<p class="font-mono-data text-mono-data text-xs text-on-surface-variant">₹2,000</p>
+</div>
+</div>
+</div>
+<!-- Milestone 3 (Current) -->
+<div class="bg-surface-container rounded-lg p-sm flex items-center justify-between border border-secondary shadow-[0_0_15px_rgba(68,226,205,0.1)] inner-highlight relative overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-[10%] bg-gradient-to-r from-secondary/10 to-transparent"></div>
+<div class="flex items-center gap-sm relative z-10">
+<span class="material-symbols-outlined text-secondary animate-pulse" style="font-variation-settings: 'FILL' 1;">business</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary">Skyline</p>
+<p class="font-mono-data text-mono-data text-xs text-on-surface">₹5,200 / ₹5,000</p>
+</div>
+</div>
+<span class="bg-secondary text-[#0a0a0a] font-label-caps text-[10px] px-2 py-1 rounded relative z-10">UNLOCKED</span>
+</div>
+<!-- Milestone 4 (Locked) -->
+<div class="bg-surface-container-low rounded-lg p-sm flex items-center justify-between border border-outline-variant/30">
+<div class="flex items-center gap-sm opacity-40">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface">Cyber Tower</p>
+<p class="font-mono-data text-mono-data text-xs text-on-surface-variant">₹15,000</p>
+</div>
+</div>
+</div>
+<!-- Milestone 5 (Locked) -->
+<div class="bg-surface-container-low rounded-lg p-sm flex items-center justify-between border border-outline-variant/30">
+<div class="flex items-center gap-sm opacity-40">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface">Metropolis</p>
+<p class="font-mono-data text-mono-data text-xs text-on-surface-variant">₹50,000</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-1 py-2 bg-surface-container-lowest border-t border-outline-variant/10 shadow-[0px_-10px_30px_rgba(0,0,0,0.8)] pb-safe">
+    <a href="/" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">home</span>
+        <span class="font-label-caps text-[9px] mt-0.5 tracking-wider">Home</span>
+    </a>
+    <a href="/my-city.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-secondary bg-secondary-container/10 rounded-xl py-1 active:scale-90 shadow-[inset_0_1px_0_rgba(68,226,205,0.1)]">
+        <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">location_city</span>
+        <span class="font-label-caps text-[9px]">City</span>
+    </a>
+    <a href="/leaderboard.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">leaderboard</span>
+        <span class="font-label-caps text-[9px]">Leagues</span>
+    </a>
+    <a href="/social-feed.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">rss_feed</span>
+        <span class="font-label-caps text-[9px]">Feed</span>
+    </a>
+    <a href="/quests.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">swords</span>
+        <span class="font-label-caps text-[9px]">Quests</span>
+    </a>
+    <a href="/shop.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">shopping_bag</span>
+        <span class="font-label-caps text-[9px]">Shop</span>
+    </a>
+</nav>
+
+<!-- Interactive Script -->
+<script>
+        let currentBalance = 5200;
+
+        function addFunds() {
+            // Update Balance
+            currentBalance += 100;
+            const display = document.getElementById('balance-display');
+            display.innerText = '₹' + currentBalance.toLocaleString('en-IN');
+            
+            // Subtle flash color for text
+            display.classList.add('text-secondary');
+            setTimeout(() => { display.classList.remove('text-secondary'); }, 300);
+
+            // Animate City Image (Pulse)
+            const img = document.getElementById('city-img');
+            img.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                img.style.transform = 'scale(1)';
+            }, 300);
+
+            // Enhance Background Glow temporarily
+            const glow = document.getElementById('city-glow');
+            glow.classList.remove('opacity-50', 'scale-75');
+            glow.classList.add('opacity-100', 'scale-110');
+            setTimeout(() => {
+                glow.classList.remove('opacity-100', 'scale-110');
+                glow.classList.add('opacity-50', 'scale-75');
+            }, 500);
+        }
+    </script>
+</body></html>

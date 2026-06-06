@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinSights - Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        .mesh-gradient {
+            background-color: #131313;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 251, 251, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(68, 226, 205, 0.15) 0px, transparent 50%);
+        }
+        
+        .card-inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        @keyframes pulse-flame {
+            0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 4px #00fbfb); }
+            50% { opacity: 0.8; transform: scale(1.05); filter: drop-shadow(0 0 8px #00fbfb); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-flame {
+            animation: pulse-flame 2s ease-in-out infinite;
+        }
+
+        .shimmer-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Hide scrollbar for horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24 font-body-lg text-body-lg">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background border-b border-outline-variant/10 z-40">
+<div class="flex justify-between items-center px-container-margin py-md">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A futuristic, high-tech portrait of a young professional in a sleek dark mode setting. The lighting is characterized by subtle neon cyan and teal highlights, creating a sleek tech aesthetic. Deep blacks dominate the background, enhancing the futuristic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw09-kO0NQa7rCOPkGFyXWH3bD9D7i2TEvk7hAFQ505ivtUjip4ayNZJc_wcJm0Cq3cQEj7yMKZ0Eya4AjTe0dSS6bkQjW8n9fBKHVx_8p-zx_6FUiA1ID-ISWMifeQDTuloTkrLBzpQqhXiE2WynbfwVkLuVEseRG1xGL58UD22Ztm4_uEuaGb0AiC9L8WYmrOF7AHpLDw9U5hQWXvQVdpqImpYIntAQM5_mdsQyxYozOSHonIn2bBs4_YeaSQILabRWNNMb4y1GO"/>
+</div>
+<h1 class="font-display text-headline-lg-mobile text-primary tracking-tighter">FinSights</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95 duration-200 p-sm rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col gap-xl pt-md">
+<!-- Profile Header -->
+<section class="px-container-margin">
+<div class="mesh-gradient rounded-xl p-md border border-surface-container-high card-inner-glow relative overflow-hidden">
+<div class="flex items-center justify-between z-10 relative">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="bg-surface-container-high text-primary-fixed-dim px-sm py-xs rounded-full font-label-caps text-label-caps border border-surface-variant">Lvl 12</span>
+<span class="font-title-md text-title-md text-primary">Master Saver</span>
+</div>
+<div class="flex items-center gap-sm mt-sm">
+<div class="animate-float text-primary-fixed w-6 h-6 flex items-center justify-center rounded-full bg-primary-fixed/10 border border-primary-fixed/30 shadow-[0_0_10px_rgba(0,251,251,0.2)]">
+<span class="material-symbols-outlined text-[16px]" data-icon="monetization_on" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+</div>
+<span class="font-mono-data text-mono-data text-2xl text-primary tracking-tight">1,250</span>
+</div>
+</div>
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-fixed/50 shadow-[0_0_15px_rgba(0,251,251,0.15)] relative">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A futuristic, high-tech portrait of a young professional in a sleek dark mode setting. The lighting is characterized by subtle neon cyan and teal highlights, creating a sleek tech aesthetic. Deep blacks dominate the background, enhancing the futuristic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5TfqN7tptgYmMxI4uLTjC9jE5FFfQdCVVD_nFTWhT6ZSotwkRVo3qPHewnE9bit5Tv_1O2wt6gLG5C24PDeLeeDRy-vOBf67Ih21_ZozMQOOiuQKYYOCkDle49Nh_WISjCLLmXiMrofhy9tguO7S5jrY9kGFphQgLzOGJdN7DJAzpuDaZn49XZVUa1CnkP61n0LXimdG4rExGUFUYDEUcbd5NfC3q53a6t33gZUUNgvoFAFw-ROjCj17sJw1tJZ02NkN6fdfnD4K6"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Daily Streak -->
+<section class="px-container-margin">
+<div class="bg-[#171717] rounded-xl p-md border border-[#262626] card-inner-glow">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-title-md text-title-md text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined animate-flame text-error" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                        7-Day Streak
+                    </h2>
+<span class="text-on-surface-variant font-mono-data text-mono-data">Goal: 10d</span>
+</div>
+<div class="w-full h-3 bg-[#262626] rounded-full overflow-hidden border border-surface-variant p-[2px]">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-fixed-dim to-primary-fixed-dim w-[70%] shimmer-bg"></div>
+</div>
+<div class="flex justify-between mt-sm text-on-surface-variant font-label-caps text-label-caps">
+<span>Keep it up!</span>
+<span>3 days to reward</span>
+</div>
+</div>
+</section>
+<!-- Quick-Learn -->
+<section>
+<div class="px-container-margin mb-md flex justify-between items-end">
+<h2 class="font-title-md text-title-md text-primary">Quick-Learn</h2>
+<button class="text-secondary-fixed-dim font-label-caps text-label-caps hover:text-primary transition-colors">VIEW ALL</button>
+</div>
+<div class="flex overflow-x-auto gap-md px-container-margin no-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[240px] snap-center relative rounded-xl overflow-hidden aspect-video border border-[#262626] card-inner-glow group cursor-pointer">
+<img alt="Budgeting 101" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="A sleek, modern digital dashboard showing financial graphs and charts on a dark interface. The scene is illuminated by subtle glowing cyan and teal data points, reinforcing a high-tech, futuristic dark mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqNBTlCS4k-m63HJm7rZ53R4Im1qNhcU5Kwk3VmDVoC3gRb6vCU-_FGhQEIBeV2m0CkJABGHK259KJExw4dOp37_DopuxKHF3mTpZTuBS4SgXi01YK-OR2AIhUHSTC37K7nQ2CLPKdm5NbSOWfLxBidfgreTBEEmmMuxzwIFLT6HUlPyBQ3qS33BuAqyqoRXqAG_uq3cZ-TDGokCLvYcHZBZ_5X7Y_qvGKhEeabySJSjnnIRAThAdj9HVvqUem3uYgNfaOF_TX0Gal"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md w-full">
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[14px]" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-secondary-fixed-dim/10 px-xs py-[2px] rounded backdrop-blur-sm border border-secondary-fixed-dim/20">2 MIN READ</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary drop-shadow-md">Budgeting 101</h3>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[240px] snap-center relative rounded-xl overflow-hidden aspect-video border border-[#262626] card-inner-glow group cursor-pointer">
+<img alt="Investing Basics" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="An abstract visualization of a stock market trend line in a futuristic setting. The line glows brightly in neon cyan and teal against an infinite deep black background. The overall mood is precise, technological, and high-octane." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeKp3hBLRFgoOuY_pmxQoDkDPDDMaiIJtHK5HulCgenSr4uQZST5cc9xHDmwpavM92rO1iby2e7I28mzwiv6O-QL6ahx2gmNi0JgGLPKu9J9Y9S74xVVOQcsz98_SgZkgJ3wSQ0rWUOQbmkfIewNfsr-ikc1HGgbxBZB2BLhCBwhBR2yn7urunoypr3wLGY9Tgj4goZDBeWeVKgb_07r0u0zJ69cZV4cmOlfgxB-DNRoqhombEDkaZBMOyenk3SmvARn6vq3xRFX1S"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md w-full">
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[14px]" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-secondary-fixed-dim/10 px-xs py-[2px] rounded backdrop-blur-sm border border-secondary-fixed-dim/20">3 MIN READ</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary drop-shadow-md">Investing Basics</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Friends Activity -->
+<section class="px-container-margin">
+<h2 class="font-title-md text-title-md text-primary mb-md">Network Activity</h2>
+<div class="flex flex-col gap-sm">
+<!-- Activity 1 -->
+<div class="bg-[#171717] rounded-lg p-sm border border-[#262626] flex items-center gap-md hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/10 border border-primary-fixed/20 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined" data-icon="savings">savings</span>
+</div>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Alex</span> just saved <span class="font-mono-data text-secondary-fixed-dim">₹50</span>
+</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">2m ago</span>
+</div>
+</div>
+<!-- Activity 2 -->
+<div class="bg-[#171717] rounded-lg p-sm border border-[#262626] flex items-center gap-md hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-error/10 border border-error/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Priya</span> reached a 10-day streak
+                        </p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">1h ago</span>
+</div>
+</div>
+<!-- Activity 3 -->
+<div class="bg-[#171717] rounded-lg p-sm border border-[#262626] flex items-center gap-md hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/10 border border-secondary-fixed/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Sam</span> finished Budgeting 101
+                        </p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">3h ago</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-1 py-2 bg-surface-container-lowest border-t border-outline-variant/10 shadow-[0px_-10px_30px_rgba(0,0,0,0.8)] pb-safe">
+    <a href="/" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-secondary bg-secondary-container/10 rounded-xl py-1 active:scale-90 shadow-[inset_0_1px_0_rgba(68,226,205,0.1)]">
+        <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">home</span>
+        <span class="font-label-caps text-[9px] mt-0.5 tracking-wider">Home</span>
+    </a>
+    <a href="/my-city.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">location_city</span>
+        <span class="font-label-caps text-[9px]">City</span>
+    </a>
+    <a href="/leaderboard.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">leaderboard</span>
+        <span class="font-label-caps text-[9px]">Leagues</span>
+    </a>
+    <a href="/social-feed.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">rss_feed</span>
+        <span class="font-label-caps text-[9px]">Feed</span>
+    </a>
+    <a href="/quests.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">swords</span>
+        <span class="font-label-caps text-[9px]">Quests</span>
+    </a>
+    <a href="/shop.html" class="flex flex-col items-center justify-center transition-colors cursor-pointer w-[16%] text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined mb-1 text-xl">shopping_bag</span>
+        <span class="font-label-caps text-[9px]">Shop</span>
+    </a>
+</nav>
+
+</body></html>
